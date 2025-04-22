@@ -39,6 +39,6 @@ def feed_animals(animals: list) -> int:
     total_food_points = 0
     for animal in animals:
         if animal.is_hungry:
-            total_food_points += animal.appetite
-            animal.feed()
+            food_points = animal.feed()
+            total_food_points += food_points
     return total_food_points
